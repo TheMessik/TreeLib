@@ -11,8 +11,8 @@ Use at your own risk, feel free to debug/send bug reports/improve our code
 
 
 # Trees to be added:
-2-3 tree
-Red-Black tree
-Binary Tree
-Binary Search Tree
-AVL-tree
+- 2-3 tree
+- Red-Black tree
+- Binary Tree
+- Binary Search Tree
+- AVL-tree

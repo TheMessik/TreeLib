@@ -2,15 +2,15 @@ package graph;
 
 import java.util.List;
 
-public abstract class Node {
-    private final String item;
+public class Node {
+    private final int item;
     private List<Node> children;
 
-    public Node(String item) {
+    public Node(int item) {
         this.item = item;
     }
 
-    public String getItem() {
+    public int getItem() {
         return item;
     }
 

@@ -1,5 +1,7 @@
 package graph;
 
+import org.w3c.dom.Node;
+
 import java.util.List;
 
 public abstract class Graph {

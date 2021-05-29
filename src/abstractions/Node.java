@@ -1,12 +1,12 @@
-package graph;
+package abstractions;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Node<T extends Comparable<T>> {
+    protected final List<Node<T>> children;
     protected T value;
     protected Node<T> parent;
-    protected final List<Node<T>> children;
 
     public Node(Node<T> parent, T value) {
         this.value = value;

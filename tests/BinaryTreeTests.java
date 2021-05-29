@@ -1,6 +1,6 @@
 import binarytree.BinaryTree;
 import binarytree.BinaryTreeNode;
-import graph.Node;
+import abstractions.Node;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,11 +34,6 @@ public class BinaryTreeTests {
         tree.addNode(4);
 
         Assert.assertEquals(4, tree.getSize());
-    }
-
-    @Test
-    public void testAddition3() {
-        Node<Integer> n1 = new BinaryTreeNode<>(null, 1);
     }
 
     @Test

@@ -1,4 +1,4 @@
-package graph;
+package abstractions;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -28,8 +28,12 @@ public abstract class Tree<T extends Comparable<T>> {
     }
 
     public abstract Node<T> addNode(T value);
+
     public abstract boolean removeNode(T value);
-    public abstract boolean removeNode (Node<T> n);
+
+    public abstract boolean removeNode(Node<T> n);
+
     public abstract Node<T> findNode(T value);
+
     public abstract String toString();
 }

@@ -1,7 +1,7 @@
 package binarytree;
 
-import graph.Node;
-import graph.Tree;
+import abstractions.Node;
+import abstractions.Tree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class BinaryTree<T extends Comparable<T>> extends Tree<T> {
         this.values.remove(value);
         this.nodes.remove(node);
 
-        if(node.getParent() != null) {
+        if (node.getParent() != null) {
             node.getParent().getChildren().remove(node);
             this.nodes.remove(node);
         } else { // if the value had no parent, it was the root node
@@ -82,7 +82,7 @@ public class BinaryTree<T extends Comparable<T>> extends Tree<T> {
         // it could happen that we have removed the root node and set the first child to be the new root
         // if so, only reintroduce the other children, omitting the first one
         int start = 0;
-        if(node.getParent() == null) {
+        if (node.getParent() == null) {
             start = 1;
         }
 
@@ -154,12 +154,12 @@ public class BinaryTree<T extends Comparable<T>> extends Tree<T> {
 
     @Override
     public String toString() {
-        if(nodes.size() == 0) {
+        if (nodes.size() == 0) {
             return "Empty";
         }
 
         StringBuilder sb = new StringBuilder();
-        for(Node<T> n : nodes) {
+        for (Node<T> n : nodes) {
             sb.append(n.toString());
         }
 

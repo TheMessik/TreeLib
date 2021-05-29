@@ -1,6 +1,6 @@
 package binarytree;
 
-import graph.Node;
+import abstractions.Node;
 
 import java.util.Random;
 
@@ -68,7 +68,7 @@ public class BinaryTreeNode<T extends Comparable<T>> extends Node<T> {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("BT(%s)", value));
 
-        for(Node<T> child : children) {
+        for (Node<T> child : children) {
             sb.append(":");
             sb.append(child.toString());
         }

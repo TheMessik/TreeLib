@@ -8,11 +8,11 @@ In light of statement above, we offer ABSOLUTELY NO WARRANTY in terms of (absenc
 Use at your own risk and feel free to debug/send bug reports/improve our code
 
 # Trees currently supported:
-
+- Binary Tree
 
 # Trees to be added:
 - 2-3 tree
 - Red-Black tree
-- Binary Tree
+
 - Binary Search Tree
 - AVL-tree

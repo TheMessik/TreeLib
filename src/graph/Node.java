@@ -1,20 +1,46 @@
 package graph;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Node {
-    private final String item;
-    private List<Node> children;
+public abstract class Node<T extends Comparable<T>> {
+    protected T value;
+    protected Node<T> parent;
+    protected final List<Node<T>> children;
 
-    public Node(String item) {
-        this.item = item;
+    public Node(Node<T> parent, T value) {
+        this.value = value;
+        this.parent = parent;
+        this.children = new ArrayList<>();
     }
 
-    public String getItem() {
-        return item;
+    public T getValue() {
+        return value;
     }
 
-    public List<Node> getChildren() {
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public List<Node<T>> getChildren() {
         return children;
     }
+
+    public Node<T> getParent() {
+        return parent;
+    }
+
+    public abstract Node<T> addNode(T value);
+
+    @Override
+    public int hashCode() {
+        return value.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    public abstract String toString();
 }
